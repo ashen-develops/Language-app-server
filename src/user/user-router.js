@@ -7,7 +7,6 @@ const jsonBodyParser = express.json()
 
 userRouter
   .post('/', jsonBodyParser, async (req, res, next) => {
-    console.log("start of post user")
     const { password, username, name } = req.body
 
     for (const field of ['name', 'username', 'password'])
@@ -47,8 +46,6 @@ userRouter
         req.app.get('db'),
         user.id
       )
-
-      console.log(res.json())
 
       res
         .status(201)
