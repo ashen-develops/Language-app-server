@@ -2,7 +2,7 @@ const { JsonWebTokenError } = require('jsonwebtoken')
 const AuthService = require('../auth/auth-service')
 
 async function requireAuth(req, res, next) {
-  const authToken = req.get('Authorization') || ''
+  const authToken = req.get('bearer') || ''
 
   let bearerToken
   if (!authToken.toLowerCase().startsWith('bearer ')) {
