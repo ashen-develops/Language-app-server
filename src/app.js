@@ -10,8 +10,6 @@ const userRouter = require('./user/user-router');
 
 const app = express();
 
-console.log("very least")
-
 app.use(morgan((NODE_ENV === 'production') ? 'tiny' : 'common', {
   skip: () => NODE_ENV === 'test',
 }));
