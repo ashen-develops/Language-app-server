@@ -1,5 +1,5 @@
 module.exports = {
-  PORT:  8000,
+  PORT: process.env.PORT || 8000,
   NODE_ENV:  'production',
   DB_URL: 'postgresql://postgres@localhost/spaced-repetition',
   JWT_SECRET: 'secret',
