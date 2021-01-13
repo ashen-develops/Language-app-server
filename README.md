@@ -20,6 +20,8 @@ env MIGRATION_DB_NAME=spaced-repetition-test npm run migrate
 
 And `npm test` should work at this point
 
+change
+
 ## Configuring Postgres
 
 For tests involving time to run properly, configure your Postgres database to run in the UTC timezone.
